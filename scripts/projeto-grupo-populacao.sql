@@ -59,8 +59,9 @@ VALUES
     ('Rua Perez da Luz', '33', 'casa', 'Santo Antônio', 'Vitória', 'ES', '33445608');
     
     
-INSERT INTO bd_resilia.Pessoas(nome, data_nasc, cpf, telefone, email, nivel_escolaridade, pcd, endereco_id)
-	VALUES
+INSERT INTO 
+	bd_resilia.Pessoas(nome, data_nasc, cpf, telefone, email, nivel_escolaridade, pcd, endereco_id)
+VALUES
 	('Aline Souza', '1993-05-26', '45678901212', '9900112233', 'aline.souza@example.com', 'Superior', 'Não', '1'),
 	('Amanda Fernandes', '1992-04-03', '78901234567', '3344556677', 'amanda.fernandes@example.com', 'Superior', 'Não', '2'),
 	('Ana Beatriz Fernandes', '1990-09-18', '12345678901', '3344556677', 'ana.beatriz.fernandes@example.com', 'Superior', 'Sim', '3'),
@@ -118,8 +119,9 @@ INSERT INTO bd_resilia.Pessoas(nome, data_nasc, cpf, telefone, email, nivel_esco
 	('Bruno Costa', '1985-05-25', '23456789012', '11923456789', 'bruno.costa@email.com', 'Superior', 'Não', 55),
 	('Carla Martins', '1995-08-05', '34567890123', '11934567890', 'carla.martins@email.com', 'Superior', 'Não', 56);
 
-    INSERT INTO bd_resilia.Estudantes(senha, pessoa_id)
-	VALUES
+INSERT INTO 
+	bd_resilia.Estudantes(senha, pessoa_id)
+VALUES
 	('0AB&12345','1'),
 	('2A#345678','2'),
 	('2S#345678','3'),
@@ -171,7 +173,8 @@ INSERT INTO bd_resilia.Pessoas(nome, data_nasc, cpf, telefone, email, nivel_esco
 	('TU6&78901','49'),
 	('VW9@56789','50');
     
-    INSERT INTO bd_resilia.Facilitadores(formacao, frente, pessoa_id)
+INSERT INTO 
+	bd_resilia.Facilitadores(formacao, frente, pessoa_id)
 VALUES
 	('engenharia de software', 'hard', '51'),
 	('psicologia', 'soft','52'),
@@ -180,14 +183,16 @@ VALUES
     ('psicologia', 'soft', '55'),
     ('engenharia de software', 'hard', '56');
 
-	INSERT INTO bd_resilia.Cursos(nome, duracao)
+INSERT INTO 
+	bd_resilia.Cursos(nome, duracao)
 VALUES
 	('Formação WebDev Full Stack JavaScript','312'),
 	('Formação em Data Analytics','156'),
 	('Formação Análise de Sistemas','156'),
 	('Formação WebDev Full Stack Java','312');
     
-    INSERT INTO bd_resilia.Modulos(nome, qtd_aulas, carga_horaria)   
+INSERT INTO 
+	bd_resilia.Modulos(nome, qtd_aulas, carga_horaria)   
 VALUES
 	('Introdução', '04','12'),
 	('Introdução ao front-end e criação de hábitos', '20', '60'),
@@ -207,14 +212,16 @@ VALUES
 	('APIs e Integrações', '20', '60'),
 	('Desenvolvimento de Aplicativos Móveis', '20', '60');
     
-    INSERT INTO bd_resilia.turmas(nome, organizacao, data_inicio, turno, curso_id)
+INSERT INTO 
+	bd_resilia.turmas(nome, organizacao, data_inicio, turno, curso_id)
 VALUES
 	('Códigos do Amanhã', 'EBANX', '2023-05-01', 'Manhã', '1' ),
 	('Turma FuturoDigital', 'TechSolutions', '2023-06-01', 'Tarde', '2' ),
 	('Turma TransformaTI', 'Infinitech', '2023-04-03', 'Noite', '3' ),
 	('Turma Código em Ação', 'MetaEdge', '2023-07-01', 'Manhã', '4' );
     
-INSERT INTO bd_resilia.Desempenhos(nota_indiv, nota_grupo, frequencia)   
+INSERT INTO 
+	bd_resilia.Desempenhos(nota_indiv, nota_grupo, frequencia)   
 VALUES
 	('75', '92', '100'),
 	('80', '75', '98'),
@@ -279,7 +286,8 @@ VALUES
     ('80', '83', '92');
 
 
-INSERT INTO bd_resilia.curso_modulo (curso_id, modulo_id)
+INSERT INTO 
+	bd_resilia.curso_modulo (curso_id, modulo_id)
 VALUES 
 	('1','1'),
 	('1','2'),
@@ -302,60 +310,9 @@ VALUES
 	('4','16'),
 	('4','17');
     
-INSERT INTO bd_resilia.Estudante_turma(matricula, status, estudante_id, turma_id, desempenho_estudante_id)
-VALUES 
-('ABDF1234', 'ativo', 1, 1, 1),
-('ASDA8901', 'ativo', 2, 2, 2),
-('BNMK2109', 'ativo', 3, 3, 3),
-('BVCX3456', 'ativo', 4, 4, 4),
-('EDCA4321', 'inativo', 5, 1, 5),
-('FGHJ6543', 'ativo', 6, 2, 6),
-('GFEW7654', 'ativo', 7, 3, 7),
-('HGFY1098', 'ativo', 8, 4, 8),
-('HNSR4321', 'inativo', 9, 1, 9),
-('IYRE7654', 'ativo', 10, 2, 10),
-('JHGF9876', 'ativo', 11, 3, 11),
-('JKLP9876', 'ativo', 12, 4, 12),
-('LFJG7654', 'ativo', 13, 1, 13),
-('LKIJ2345', 'ativo', 14, 2, 14),
-('LKUY5678', 'ativo', 15, 3, 15),
-('LPLM4321', 'ativo', 16, 4, 16),
-('MNBP0987', 'ativo', 17, 1, 17),
-('MNBV0987', 'inativo', 18, 2, 18),
-('MTCB9876', 'ativo', 19, 3, 19),
-('NBVN4321', 'ativo', 20, 4, 20),
-('NHVD4321', 'ativo', 21, 1, 21),
-('NMPO5432', 'ativo', 22, 2, 22),
-('OINM4321', 'ativo', 23, 3, 23),
-('PLSM1098', 'ativo', 24, 4, 24),
-('POIU1098', 'ativo', 25, 1, 25),
-('POKJ6543', 'ativo', 26, 2, 26),
-('POUY4321', 'inativo', 27, 3, 27),
-('PQOR8901', 'ativo', 28, 4, 28),
-('QWEA7654', 'ativo', 29, 1, 29),
-('QWER5678', 'ativo', 30, 2, 30),
-('RQWE7654', 'ativo', 31, 3, 31),
-('TREA6780', 'inativo', 32, 4, 32),
-('TUVZ6780', 'ativo', 33, 1, 33),
-('UYIR2109', 'ativo', 34, 2, 34),
-('VBNM6789', 'ativo', 35, 3, 35),
-('VKLK5678', 'ativo', 36, 4, 36),
-('VMXC6789', 'ativo', 37, 1, 37),
-('VRTY8765', 'ativo', 38, 2, 38),
-('WERT3456', 'ativo', 39, 3, 39),
-('WRTY2109', 'ativo', 40, 4, 40),
-('WVUT6789', 'ativo', 41, 1, 41),
-('XKDC5432', 'ativo', 42, 2, 42),
-('XVBN8901', 'ativo', 43, 3, 43),
-('XYSV5678', 'ativo', 44, 4, 44),
-('YTRA8765', 'ativo', 45, 1, 45),
-('ZKXB8765', 'ativo', 46, 2, 46),
-('ZMQW5678', 'ativo', 47, 3, 47),
-('ZQWE4321', 'ativo', 48, 4, 48),
-('ZXCV4321', 'ativo', 49, 1, 49),
-('ZXCV5432', 'ativo', 50, 2, 50);
-
-INSERT INTO bd_resilia.Desempenhos_estudante (modulo_id, desempenho_id, estudante_id)
+    
+INSERT INTO 
+	bd_resilia.Desempenhos_estudante (modulo_id, desempenho_id, estudante_id)
 VALUES 
 	('1','1','1'),
 	('2','2','1'),
@@ -419,7 +376,64 @@ VALUES
     ('1','60','49'),
 	('1','61','50');
     
-INSERT INTO bd_resilia.Facilitador_turma (facilitador_id, turma_id)
+    
+INSERT INTO 
+	bd_resilia.Estudante_turma(matricula, status, estudante_id, turma_id, desempenho_estudante_id)
+VALUES 
+	('ABDF1234', 'ativo', 1, 1, 1),
+	('ASDA8901', 'ativo', 2, 2, 2),
+	('BNMK2109', 'ativo', 3, 3, 3),
+	('BVCX3456', 'ativo', 4, 4, 4),
+	('EDCA4321', 'inativo', 5, 1, 5),
+	('FGHJ6543', 'ativo', 6, 2, 6),
+	('GFEW7654', 'ativo', 7, 3, 7),
+	('HGFY1098', 'ativo', 8, 4, 8),
+	('HNSR4321', 'inativo', 9, 1, 9),
+	('IYRE7654', 'ativo', 10, 2, 10),
+	('JHGF9876', 'ativo', 11, 3, 11),
+	('JKLP9876', 'ativo', 12, 4, 12),
+	('LFJG7654', 'ativo', 13, 1, 13),
+	('LKIJ2345', 'ativo', 14, 2, 14),
+	('LKUY5678', 'ativo', 15, 3, 15),
+	('LPLM4321', 'ativo', 16, 4, 16),
+	('MNBP0987', 'ativo', 17, 1, 17),
+	('MNBV0987', 'inativo', 18, 2, 18),
+	('MTCB9876', 'ativo', 19, 3, 19),
+	('NBVN4321', 'ativo', 20, 4, 20),
+	('NHVD4321', 'ativo', 21, 1, 21),
+	('NMPO5432', 'ativo', 22, 2, 22),
+	('OINM4321', 'ativo', 23, 3, 23),
+	('PLSM1098', 'ativo', 24, 4, 24),
+	('POIU1098', 'ativo', 25, 1, 25),
+	('POKJ6543', 'ativo', 26, 2, 26),
+	('POUY4321', 'inativo', 27, 3, 27),
+	('PQOR8901', 'ativo', 28, 4, 28),
+	('QWEA7654', 'ativo', 29, 1, 29),
+	('QWER5678', 'ativo', 30, 2, 30),
+	('RQWE7654', 'ativo', 31, 3, 31),
+	('TREA6780', 'inativo', 32, 4, 32),
+	('TUVZ6780', 'ativo', 33, 1, 33),
+	('UYIR2109', 'ativo', 34, 2, 34),
+	('VBNM6789', 'ativo', 35, 3, 35),
+	('VKLK5678', 'ativo', 36, 4, 36),
+	('VMXC6789', 'ativo', 37, 1, 37),
+	('VRTY8765', 'ativo', 38, 2, 38),
+	('WERT3456', 'ativo', 39, 3, 39),
+	('WRTY2109', 'ativo', 40, 4, 40),
+	('WVUT6789', 'ativo', 41, 1, 41),
+	('XKDC5432', 'ativo', 42, 2, 42),
+	('XVBN8901', 'ativo', 43, 3, 43),
+	('XYSV5678', 'ativo', 44, 4, 44),
+	('YTRA8765', 'ativo', 45, 1, 45),
+	('ZKXB8765', 'ativo', 46, 2, 46),
+	('ZMQW5678', 'ativo', 47, 3, 47),
+	('ZQWE4321', 'ativo', 48, 4, 48),
+	('ZXCV4321', 'ativo', 49, 1, 49),
+	('ZXCV5432', 'ativo', 50, 2, 50);
+
+    
+INSERT INTO 
+	bd_resilia.Facilitador_turma (facilitador_id, turma_id)
 VALUES 
 	('1','1'),        
 	('1','2'),              
